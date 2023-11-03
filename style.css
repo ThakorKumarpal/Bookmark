@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url("astronomy-1867616_1280.jpg");
+}
+nav {
+  background-image: url("milky-way-74005_1280.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  color: white;
+  border-radius: 10px;
+}
+.section1 ul {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 800px;
+}
+li {
+  border: 2px solid transparent;
+  border-radius: 25px;
+}
+li:hover {
+  border: 2px solid white;
+}
+.box1 {
+  background-image: url("milky-way-74005_1280.jpg");
+  color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 17px;
+  background-color: black;
+  border-radius: 7px;
+}
+.bookmark-buttons {
+  height: 300px;
+  width: 51vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+.bookmark-btn {
+  border-radius: 15px;
+  margin: 15px 0;
+  height: 30px;
+  width: 200px;
+}
+#submit-btn {
+  margin-top: 20px;
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#submit-btn:hover {
+  background-color: #45a049;
+}
+.bookmark-container {
+  background-image: url("moon-1527501_1280.jpg");
+  background-size: cover;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 50vw;
+  max-height: 400px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 5px blueviolet, 0 0 25px blueviolet;
+  border-radius: 5px;
+}
+@media (max-width: 550px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bookmark-btn:active {
+  background-color: gold;
+  border: 2px solid #ff6666;
+  color: #ff0000;
+}

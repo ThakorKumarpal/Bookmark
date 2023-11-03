@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="section1">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contect Us</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="box1">
+        <h1>My Bookmarks</h1>
+      </section>
+      <div class="bookmark-container">
+        <div class="bookmark-buttons">
+          <button class="bookmark-btn" id="whatsapp-bookmark">Whatsapp</button>
+          <button class="bookmark-btn" id="facebook-bookmark">Facebook</button>
+          <button class="bookmark-btn" id="instagram-bookmark">
+            instagram
+          </button>
+          <button class="bookmark-btn" id="snapchat-bookmark">Snapchat</button>
+          <button class="bookmark-btn" id="twitter-bookmark">Twitter</button>
+          <button class="bookmark-btn" id="threads-bookmark">Thread</button>
+          <button class="bookmark-btn" id="linkedin-bookmark">linkedin</button>
+        </div>
+        <button id="submit-btn">Submit</button>
+      </div>
+    </main>
+  </body>
+  <script>
+    var selectedBookmark = "";
+    document
+      .getElementById("whatsapp-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://wa.me/1234567890";
+      });
+    document
+      .getElementById("facebook-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://m.facebook.com/";
+      });
+    document
+      .getElementById("instagram-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://www.instagram.com/";
+      });
+    document
+      .getElementById("snapchat-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://www.snapchat.com/";
+      });
+    document
+      .getElementById("twitter-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://twitter.com/";
+      });
+    document
+      .getElementById("threads-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://www.threada.net/";
+      });
+    document
+      .getElementById("linkedin-bookmark")
+      .addEventListener("click", function () {
+        selectedBookmark = "https://in.linkedin.com/";
+      });
+    document
+      .getElementById("submit-btn")
+      .addEventListener("click", function () {
+        if (selectedBookmark) {
+          window.location.href = selectedBookmark;
+        } else {
+          console.log("pleasen select before submit");
+        }
+      });
+  </script>
+</html>
