@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <video
+      src="pexels-creativ-medium-5667054 (2160p).mp4"
+      autoplay
+      loop
+      muted
+    ></video>
     <header>
       <nav>
         <div class="section1">
@@ -19,10 +25,18 @@
       </nav>
     </header>
     <main>
-      <section class="box1">
-        <h1>My Bookmarks</h1>
-      </section>
       <div class="bookmark-container">
+        <!-- <video
+          class="titan"
+          src="production_id_3692634 (1080p).mp4"
+          autoplay
+          loop
+          muted
+        ></video> -->
+        <section class="box1">
+          <h1>My Bookmarks</h1>
+          <hr />
+        </section>
         <div class="bookmark-buttons">
           <button class="bookmark-btn" id="whatsapp-bookmark">Whatsapp</button>
           <button class="bookmark-btn" id="facebook-bookmark">Facebook</button>
@@ -39,49 +53,77 @@
     </main>
   </body>
   <script>
-    var selectedBookmark = "";
-    document
-      .getElementById("whatsapp-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://wa.me/1234567890";
+    // var selectedBookmark = "";
+    // document
+    //   .getElementById("whatsapp-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://wa.me/1234567890";
+    //   });
+    // document
+    //   .getElementById("facebook-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://m.facebook.com/";
+    //   });
+    // document
+    //   .getElementById("instagram-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://www.instagram.com/";
+    //   });
+    // document
+    //   .getElementById("snapchat-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://www.snapchat.com/";
+    //   });
+    // document
+    //   .getElementById("twitter-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://twitter.com/";
+    //   });
+    // document
+    //   .getElementById("threads-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://www.threada.net/";
+    //   });
+    // document
+    //   .getElementById("linkedin-bookmark")
+    //   .addEventListener("click", function () {
+    //     selectedBookmark = "https://in.linkedin.com/";
+    //   });
+    // document
+    //   .getElementById("submit-btn")
+    //   .addEventListener("click", function () {
+    //     if (selectedBookmark) {
+    //       window.location.href = selectedBookmark;
+    //     } else {
+    //       console.log("pleasen select before submit");
+    //     }
+    //   });
+    const bookmarkButtons = document.querySelectorAll(".bookmark-btn");
+    let selectedBookmark = "";
+
+    bookmarkButtons.forEach((button) => {
+      button.addEventListener("click", function (event) {
+        const buttonId = event.target.id;
+        const bookmarkURLs = {
+          "whatsapp-bookmark": "https://wa.me/1234567890",
+          "facebook-bookmark": "https://m.facebook.com/",
+          "instagram-bookmark": "https://www.instagram.com/",
+          "snapchat-bookmark": "https://www.snapchat.com/",
+          "twitter-bookmark": "https://twitter.com/",
+          "threads-bookmark": "https://www.threada.net/",
+          "linkedin-bookmark": "https://in.linkedin.com/",
+        };
+        selectedBookmark = bookmarkURLs[buttonId];
       });
-    document
-      .getElementById("facebook-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://m.facebook.com/";
-      });
-    document
-      .getElementById("instagram-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://www.instagram.com/";
-      });
-    document
-      .getElementById("snapchat-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://www.snapchat.com/";
-      });
-    document
-      .getElementById("twitter-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://twitter.com/";
-      });
-    document
-      .getElementById("threads-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://www.threada.net/";
-      });
-    document
-      .getElementById("linkedin-bookmark")
-      .addEventListener("click", function () {
-        selectedBookmark = "https://in.linkedin.com/";
-      });
+    });
+
     document
       .getElementById("submit-btn")
       .addEventListener("click", function () {
         if (selectedBookmark) {
           window.location.href = selectedBookmark;
         } else {
-          console.log("pleasen select before submit");
+          console.log("Please select a bookmark before submitting.");
         }
       });
   </script>
