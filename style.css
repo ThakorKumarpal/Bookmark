@@ -139,7 +139,6 @@ li:hover {
 }
 
 .bookmark-btn:active {
-  background-color: gold;
-  border: 2px solid #ff6666;
-  color: #ff0000;
+  background-color: #4caf50;
+  color: white;
 }
