@@ -53,51 +53,7 @@
     </main>
   </body>
   <script>
-    // var selectedBookmark = "";
-    // document
-    //   .getElementById("whatsapp-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://wa.me/1234567890";
-    //   });
-    // document
-    //   .getElementById("facebook-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://m.facebook.com/";
-    //   });
-    // document
-    //   .getElementById("instagram-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://www.instagram.com/";
-    //   });
-    // document
-    //   .getElementById("snapchat-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://www.snapchat.com/";
-    //   });
-    // document
-    //   .getElementById("twitter-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://twitter.com/";
-    //   });
-    // document
-    //   .getElementById("threads-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://www.threada.net/";
-    //   });
-    // document
-    //   .getElementById("linkedin-bookmark")
-    //   .addEventListener("click", function () {
-    //     selectedBookmark = "https://in.linkedin.com/";
-    //   });
-    // document
-    //   .getElementById("submit-btn")
-    //   .addEventListener("click", function () {
-    //     if (selectedBookmark) {
-    //       window.location.href = selectedBookmark;
-    //     } else {
-    //       console.log("pleasen select before submit");
-    //     }
-    //   });
+
     const bookmarkButtons = document.querySelectorAll(".bookmark-btn");
     let selectedBookmark = "";
 
@@ -126,5 +82,15 @@
           console.log("Please select a bookmark before submitting.");
         }
       });
+        const buttons = document.querySelectorAll(".bookmark-btn");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        button.classList.add("active");
+      });
+    });
   </script>
 </html>
