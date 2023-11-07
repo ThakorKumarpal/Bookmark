@@ -79,6 +79,10 @@ li:hover {
   height: 20px;
   width: 150px;
 }
+.active {
+  background-color: #4caf50;
+  color: white;
+}
 #submit-btn {
   margin-top: 20px;
   height: 50px;
